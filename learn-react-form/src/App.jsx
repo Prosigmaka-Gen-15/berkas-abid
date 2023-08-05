@@ -1,8 +1,8 @@
-import HookForm from './HookForm'
+import YupForm from './YupForm'
 
 function App() {
   return <>
-    <HookForm />
+    <YupForm />
   </>
 }
 
