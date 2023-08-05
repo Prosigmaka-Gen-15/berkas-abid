@@ -1,10 +1,8 @@
-import ManualForm from './ManualForm'
+import HookForm from './HookForm'
 
 function App() {
   return <>
-    <ManualForm />
-    <br /><hr /><br />
-
+    <HookForm />
   </>
 }
 
