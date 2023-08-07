@@ -1,0 +1,22 @@
+{
+  "persons": [
+    {
+      "id": 1,
+      "name": "Abid",
+      "age": 20,
+      "job_title": "Kuli Ngoding"
+    },
+    {
+      "id": 2,
+      "name": "Michael",
+      "age": "35",
+      "job_title": "CEO"
+    },
+    {
+      "name": "ahmad",
+      "age": "30",
+      "job_title": "marketing",
+      "id": 3
+    }
+  ]
+}
