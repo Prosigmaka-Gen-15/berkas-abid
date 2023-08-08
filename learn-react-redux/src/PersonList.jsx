@@ -1,11 +1,7 @@
-import { useState } from "react"
+import { useSelector } from "react-redux"
 
 export default function PersonList () {
-	const [persons, setPersons] = useState([
-		{ name: 'Abid', age: 20 },
-		{ name: 'John', age: 30 },
-		{ name: 'Doe', age: 40 },
-	])
+	const persons = useSelector((state) => state.persons)
 
 	return <>
 		<h1>Person List</h1>

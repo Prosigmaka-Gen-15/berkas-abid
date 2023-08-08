@@ -1,16 +1,23 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux"
+
+import { addPerson } from "./store/personsSlice.js"
 
 export default function PersonForm () {
+	const dispatch = useDispatch()
+
 	const [name, setName] = useState()
 	const [age, setAge] = useState()
 
 	const handleSubmit = event => {
 		event.preventDefault()
+
 		const data = {
 			name: name,
 			age: age
 		}
-		console.log(data)
+
+		dispatch(addPerson(data))
 	}
 
 	return <>
