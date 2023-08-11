@@ -2,8 +2,12 @@ import axios from "axios"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { processLogin } from '../store/authSlice'
+import { useNavigate } from "react-router-dom"
 
 export default function Login () {
+	const dispatch = useDispatch()
+	const navigate = useNavigate()
+
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 
@@ -12,6 +16,7 @@ export default function Login () {
 		axios.post('http://localhost:3000/login', { email, password })
 			.then(res => {
 				dispatch(processLogin(res.data))
+				navigate('/admin')
 			})
 	}
 
