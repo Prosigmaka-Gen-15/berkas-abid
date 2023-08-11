@@ -1,5 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { processLogin } from '../store/authSlice'
 
 export default function Login () {
 	const [email, setEmail] = useState('')
@@ -9,7 +11,7 @@ export default function Login () {
 		e.preventDefault()
 		axios.post('http://localhost:3000/login', { email, password })
 			.then(res => {
-				console.log(res.data)
+				dispatch(processLogin(res.data))
 			})
 	}
 
